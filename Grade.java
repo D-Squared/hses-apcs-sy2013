@@ -33,6 +33,11 @@ public class Grade
   public String getLetterGrade()
   {
     String result= "";
+    int whole = aGrade;
+  if (aGrade >=4)
+  {
+   result = "A+"; 
+  }
   
     return result;
   }
