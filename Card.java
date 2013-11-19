@@ -25,12 +25,14 @@ public class Card
     {
       value= notation.substring(0,2);
       suit = notation.substring(2);
-  }
-    else if (notation.length() <= 1)
+    } 
+    else 
     {
-     value = "unknown"; 
+     value = "unknown";
+     suit = "unknown";
     }
   }
+    
     /**
       Get the description of the type and suit of the card.
       @return the description of the the card
@@ -41,7 +43,7 @@ public class Card
       
       if (value.equals("unknown"))
       {
-       output = "unknown"; 
+       return "Unknown"; 
       }
 //for the use of this tutorial
         else if( value.equalsIgnoreCase("A"))
@@ -98,7 +100,7 @@ public class Card
         }
         else
         {
-         output = "unknown"; 
+         return "unknown"; 
         }
         
         if( suit.equalsIgnoreCase("C"))
