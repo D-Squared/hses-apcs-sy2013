@@ -89,7 +89,7 @@ public class Grade
       resultWhole = "F";
     }
   
-    return resultWhole;
+    return resultWhole + resultRemainder;
   }
   
   /**

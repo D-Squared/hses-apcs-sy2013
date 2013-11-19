@@ -43,7 +43,7 @@ public class Card
       {
        output = "unknown"; 
       }
-
+//for the use of this tutorial
         else if( value.equalsIgnoreCase("A"))
         {
              output = "Ace";
