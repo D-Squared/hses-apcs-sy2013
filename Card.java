@@ -26,6 +26,10 @@ public class Card
       value= notation.substring(0,2);
       suit = notation.substring(2);
   }
+    else if (notation.length() <= 1)
+    {
+     value = "unknown"; 
+    }
   }
     /**
       Get the description of the type and suit of the card.
@@ -34,8 +38,13 @@ public class Card
    public String getDescription()
    {
       String output = "";
+      
+      if (value.equals("unknown"))
+      {
+       output = "unknown"; 
+      }
 
-        if( value.equalsIgnoreCase("A"))
+        else if( value.equalsIgnoreCase("A"))
         {
              output = "Ace";
         }
