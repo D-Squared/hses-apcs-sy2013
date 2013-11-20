@@ -33,15 +33,41 @@ public class Grade
   public String getLetterGrade()
   {
     String result= "";
-    int whole = aGrade;
-  if (aGrade >=4)
+    
+    double whole =  aGrade;
+    double remainder = aGrade % 1;
+    
+  if (whole >= 3.15 )
   {
-   result = "A+"; 
+   result = "A"; 
   }
-  
-    return result;
+  else if(whole >= 2.15)
+  {
+    result = "B";
   }
+  else if(whole >= 1.15)
+  {
+    result = "C";
+  }
+  else if (whole >= 0.5)
+  {
+   result = "D"; 
+  }
+  else
+    result = "F";
+  if ((0.5 <= remainder) && (remainder < 0.85))
+  {
+    result += "-";
+  }
+  else if ((0.15 <= remainder) && (remainder < 0.5))
+  {
+    result += "+";
+  }
+  if (result.equals("F+") || result.equals("F-"))
+    result = "F";
   
+  return result;
+  }
   /**
       Gets the numeric value of this grade.
       @return the numeric grade
