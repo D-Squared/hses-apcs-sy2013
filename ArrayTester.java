@@ -50,7 +50,11 @@ public static void main (String [] args)
   System.out.println();
   
   System.out.println("Ex 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
- 
+ Rectangle [] array_c = new Recangle[5];
+ for( int i=0; i <array_c.length; i++)
+ {
+   
+ }
   
   System.out.println("Ex 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
   
