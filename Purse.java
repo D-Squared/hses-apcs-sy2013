@@ -20,23 +20,88 @@ public class Purse
  {
    names.add(coinName);
  }
+ 
  public String toString()
  {
    
    String output= "purse[";
+   
    for(String n:names)
+     
          {
            output+=n+",";
          }
+   
   return  output+"]";
+  
  }
- public String reverseString()
+ 
+ public void reverse()
  {
-  String output = "purse[";
-  for(int i = 5; i > names; i--)
-  {
+   
+  ArrayList<String> temp = new ArrayList<String> ();
+  
+  for (int i = names.size()-1; i >=0; i--)
     
+  {
+    temp.add(names.get(i));
   }
-  return output +"]";
+  
+ names = temp;
+ 
+ }
+ 
+ public void transfer(Purse other)
+ {
+  
+   
+   for(int i = 0; i <= other.names.size()-1;i ++)
+   {
+    names.add(other.names.get(i));
+    other.names.remove(i);
+   }
+   
+   
+ }
+ 
+ 
+ public static void main(String[] args)
+ {
+   
+   Purse myPurse= new Purse();
+   
+   myPurse.addCoin("Quaters");
+   myPurse.addCoin("Dime");
+   myPurse.addCoin("Nickel");
+   myPurse.addCoin("Dime");
+   
+   System.out.println(myPurse);
+   
+   myPurse.reverse();
+   
+   System.out.println(myPurse);
+   
+   Purse a = new Purse();
+   a.addCoin("Dime");
+   a.addCoin("Nickel");
+   
+   System.out.println(a);
+   
+   Purse b = new Purse();
+   b.addCoin("Quaters");
+   b.addCoin("Dime");
+   b.addCoin("Nickel");
+   b.addCoin("Dime");
+   
+   
+     
+   a.transfer(b);
+   
+   
+   System.out.println(a);
+   System.out.println(b);
+   
+   
+ 
  }
   }
